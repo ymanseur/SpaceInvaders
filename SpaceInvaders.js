@@ -171,7 +171,9 @@ function setScene(){
 }
 
 function animateScene(){
-	requestAnimationFrame(animateScene);
+	setTimeout( function() {
+		requestAnimationFrame(animateScene);
+	}, 1000 / 30 );
 	if(startRendering)		
 		renderScene();
 	renderer.render(scene,camera);
